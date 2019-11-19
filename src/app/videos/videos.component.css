@@ -1,0 +1,97 @@
+img {
+    width: 170px;
+    height: 100px;
+}
+
+.row {
+    cursor:pointer;
+    padding: 5px; 
+    width: 90%;
+    position: relative;
+}
+
+#topBar {
+    background-color:white; 
+    position: fixed; 
+    display:block; 
+    width: 40%;
+    float: left;
+    z-index: 99;
+    height: 70px;
+    border-bottom: 1px solid gainsboro;
+    margin: 0px !important;
+    top: 0px !important;
+    padding: 5px;
+}
+
+#topBar>.row{
+    height: 40px;
+    line-height: 40px;
+}
+
+#videoRow {
+    opacity: 0.7;
+    transition: all 0.6s;
+    position: relative;
+    height: auto;
+    padding: 0%;
+    width: 100%;
+    margin: 0px !important;
+}
+
+#id1{
+    position: relative;
+    margin-top: 120px;
+    text-align: center;
+}
+
+#videoRow:hover {
+    opacity: 1;
+    background-color: #e7f0f1;
+}
+
+.col-md-6,.col-md-4,.col-md-8 {
+    text-align: center;
+    width: auto !important;
+    height: auto !important;
+}
+
+
+button {
+    background-color: transparent;
+    border: 1px solid transparent;
+    color: red;
+    font-weight: bold;
+    transition: all 0.7s;
+    font-size: 14px;
+    text-align: left;
+}
+
+button:hover{
+    color: black;
+}
+
+button:active{
+    color: red;
+}
+
+img {
+    margin: 5px;
+}
+
+input {
+    padding: 5px;
+    height: 30px;
+    border-radius: 10px;
+    opacity: 0.8;
+    cursor: pointer; 
+    transition: all 0.4s;
+    border: 1px solid gainsboro;
+    width: auto !important;
+}
+
+input:focus, input:hover {
+    opacity: 1;
+    box-shadow: 1px 1px 3px red;
+}
+

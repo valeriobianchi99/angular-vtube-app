@@ -1,0 +1,37 @@
+app-last-video {
+    position: relative;
+    float:left;
+    top: 20px;
+    width: 60% !important;
+    text-align: left;
+    margin: 0px !important;
+}
+
+app-videos {
+    top: 20px;
+    margin: 0px !important;
+    position: relative;
+    float: right;
+    width: 40% !important;
+    text-align: center;
+    border-left: 1px solid gainsboro;
+    height: 770px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 0px !important;
+    z-index: 99;
+    background-color: white;
+    box-shadow: 3px 3px 10px gainsboro;
+}
+
+footer {
+    position: absolute;
+    top: 780px;
+    width: 100%;
+    text-align: center;
+    height: 100px;
+    margin: 10px 0px;
+    line-height: 50px;
+    font-size: 14px;
+    opacity: 0.8;
+}

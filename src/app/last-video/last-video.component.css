@@ -1,0 +1,19 @@
+img {
+    width: 80%;
+    height: auto;
+    margin: 10px;
+}
+
+
+.col-md-12 {
+    text-align: left;
+    padding-left: 40px;
+}
+
+h1 {
+    font-size: 46px;
+}
+
+youtube-player {
+    border-radius: 15px;
+}
