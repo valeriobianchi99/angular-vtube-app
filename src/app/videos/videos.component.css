@@ -11,13 +11,13 @@ img {
 }
 
 #topBar {
-    background-color:white; 
+    background-color:#fdfdfd; 
     position: fixed; 
     display:block; 
-    width: 37%;
+    width: 38%;
     float: left;
     z-index: 99;
-    height: 65px;
+    height: 80px;
     border-bottom: 1px solid gainsboro;
     margin: 0px 8px !important;
     top: 0px !important;
@@ -37,6 +37,7 @@ img {
     padding: 0%;
     width: 100%;
     margin: 0px !important;
+    border-radius: 15px;
 }
 
 #id1{

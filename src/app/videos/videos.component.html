@@ -28,7 +28,7 @@
     <div class="col-md-6 container-fluid" style="text-align: left; padding-left: 5px;">
         <button (click)="playVideo(video);">
             {{ video.snippet.title }} <br>
-            <small style="color:#333; opacity: 0.8;">{{ (video.snippet.description)?video.snippet.description.slice(0,80)+'...':'' }}</small>
+            <small style="color:#333; font-size: 14px;"><i class="fas fa-user-circle"></i> &nbsp;{{ video.snippet.channelTitle }}</small>
         </button>
     </div>
 </div>
