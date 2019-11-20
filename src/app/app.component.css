@@ -1,16 +1,16 @@
 app-last-video {
     position: relative;
     float:left;
-    top: 0px;
+    top: 20px;
     width: 55% !important;
     text-align: left;
     margin: 0px !important;
 }
 
 app-videos {
-    top: 0px;
+    top: 20px;
     border-radius: 15px;
-    margin-right: 10px !important;
+    margin-right: 0px !important;
     position: relative;
     float: right;
     width: 40% !important;
@@ -27,9 +27,19 @@ app-videos {
 }
 
 #main {
-    position: absolute;
+    position: relative;
+    top: 0px;
     padding: 0px !important;
     height: auto !important;
+}
+
+#topInfo{
+  position:fixed;
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  z-index: 109;
+  margin:0px !important;
 }
 
 footer {

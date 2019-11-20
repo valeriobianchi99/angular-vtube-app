@@ -20,7 +20,7 @@ img {
     height: 80px;
     border-bottom: 1px solid gainsboro;
     margin: 0px 8px !important;
-    top: 0px !important;
+    top: 20px !important;
     padding: 0px;
 }
 
@@ -69,12 +69,9 @@ button {
 }
 
 button:hover{
-    color: black;
+    text-decoration: underline;
 }
 
-button:active{
-    color: red;
-}
 
 img {
     margin: 5px;
@@ -83,16 +80,19 @@ img {
 input {
     padding: 5px;
     height: 30px;
-    border-radius: 10px;
     opacity: 0.8;
     cursor: pointer; 
     transition: all 0.4s;
-    border: 1px solid gainsboro;
+    border: 1px solid transparent;
+    border-bottom: 2px solid gainsboro;
     width: auto !important;
+    background-color: #fdfdfd;
+    box-decoration-break: none;
 }
 
-input:focus, input:hover {
+input:focus, input:hover{
     opacity: 1;
-    box-shadow: 1px 1px 3px red;
+    border-bottom: 2px solid red;
 }
+
 

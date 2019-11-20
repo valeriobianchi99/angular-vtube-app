@@ -1,3 +1,13 @@
+<div id="topInfo" class="row container-fluid w-100">
+  <div class="col-md-6 container-fluid w-auto h-auto" style="text-align: left; padding-left: 10px;">
+    Welcome to VTube! Last 24hrs most popular videos.
+  </div>
+  <div class="col-md-6 container-fluid w-auto h-auto" style="text-align: right; padding-right: 10px;">
+      <span style="opacity: 0.7">
+        <strong>VTube &copy;</strong> - All rights reserved
+      </span>
+  </div>
+</div>
 <div class="container-fluid w-100 h-100 p-0 m-0" id="main">
   <app-last-video class="container-fluid w-auto mx-auto p-auto h-auto" [lastVideo]="getVideo()"></app-last-video>
   <app-videos class="container-fluid w-auto p-auto" (setter)="setVideo($event)"></app-videos>
