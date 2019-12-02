@@ -3,6 +3,7 @@
         <h1> <strong style="color:red;opacity:0.7;">V</strong>Tube</h1> 
     </div>
 </div>
+
 <div class="container-fluid" style="position: relative;top: 120px;">
     <div class="row">
         <div class="col-md-12">
@@ -14,7 +15,9 @@
         <div class="col-md-12">
             <h5 style="color: red; opacity: 0.4;">#TopVideo</h5>
             <h3 style="color: red; font-weight: bold;">{{ lastVideo.snippet.title }}</h3>
-            <small style="font-size:12px; color: black; opacity: 0.7"><i class="fas fa-calendar-alt"></i> Published on {{ lastVideo.snippet.publishedAt.slice(0,10) }}</small>
+            <small style="font-size:12px; color: black; opacity: 0.7">
+                <i class="fas fa-calendar-alt"></i> Published on {{ lastVideo.snippet.publishedAt.slice(0,10) }}
+            </small>
             <br>
             <br>
             <p style="font-size: 19px; opacity: 0.9">

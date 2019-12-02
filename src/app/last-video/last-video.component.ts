@@ -10,7 +10,7 @@ import { YoutubeService } from '../youtube.service';
 
 export class LastVideoComponent implements OnInit, OnChanges {
 
-  @Input() lastVideo: any = {};
+  @Input() lastVideo: any;
   player: YT.Player;
   subscription: Subscription;
   position: any;

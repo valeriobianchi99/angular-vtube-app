@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  video: any = {};
+  video: any;
 
   setVideo(obj):void{
     this.video=obj;
@@ -15,6 +15,16 @@ export class AppComponent {
 
   getVideo():object {
     return this.video;
+  }
+
+  showVideos():void {
+    var status = document.getElementById('videosList').style.display;
+    if(status=='none'){
+      document.getElementById('videosList').style.display='block';
+    }
+    else {
+      document.getElementById('videosList').style.display='none';
+    }
   }
 
 }
