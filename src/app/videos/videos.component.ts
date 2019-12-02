@@ -18,7 +18,8 @@ export class VideosComponent implements OnInit{
   filtro: string;
   @Output() setter = new EventEmitter<object>();
 
-  constructor(private youtube: YoutubeService) { 
+  constructor(private youtube: YoutubeService) {
+    console.clear();
     this.subscription = this.youtube.getVideos().subscribe(
       res=>{
           for(let el of res['items']){
@@ -28,6 +29,7 @@ export class VideosComponent implements OnInit{
           }
         }
     );
+    console.log('Videos V');
     console.log(this.videos);
     this.searchedVideos=this.videos;
 
