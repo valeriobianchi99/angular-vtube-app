@@ -7,24 +7,24 @@
 <div class="container-fluid" style="position: relative;top: 120px;">
     <div class="row">
         <div class="col-md-12">
-            <youtube-player height="500px" width="800px" (ready)="readyPlayer($event);" [videoId]="lastVideo.id.videoId"></youtube-player>
+            <youtube-player height="500px" width="800px" (ready)="readyPlayer($event);" [videoId]="lastVideo?.id.videoId"></youtube-player>
         </div>
     </div>
     <br>
     <div class="row">
         <div class="col-md-12">
             <h5 style="color: red; opacity: 0.4;">#TopVideo</h5>
-            <h3 style="color: red; font-weight: bold;">{{ lastVideo.snippet.title }}</h3>
+            <h3 style="color: red; font-weight: bold;">{{ lastVideo?.snippet.title }}</h3>
             <small style="font-size:12px; color: black; opacity: 0.7">
-                <i class="fas fa-calendar-alt"></i> Published on {{ lastVideo.snippet.publishedAt.slice(0,10) }}
+                <i class="fas fa-calendar-alt"></i> Published on {{ lastVideo?.snippet.publishedAt.slice(0,10) }}
             </small>
             <br>
             <br>
             <p style="font-size: 19px; opacity: 0.9">
-                <strong><i class="fas fa-user-circle"></i> &nbsp;{{ lastVideo.snippet.channelTitle }}</strong>
+                <strong><i class="fas fa-user-circle"></i> &nbsp;{{ lastVideo?.snippet.channelTitle }}</strong>
             </p>
             <h5 style="color: red; opacity: 0.7;"><strong>Description</strong></h5>
-            <p style="font-size: 16px; opacity:0.8;">{{ lastVideo.snippet.description }}</p>
+            <p style="font-size: 16px; opacity:0.8;">{{ lastVideo?.snippet.description }}</p>
         </div>
     </div>
 </div>

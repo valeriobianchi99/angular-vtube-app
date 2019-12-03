@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
 
   video: any;
@@ -21,9 +22,12 @@ export class AppComponent {
     var status = document.getElementById('videosList').style.display;
     if(status=='none'){
       document.getElementById('videosList').style.display='block';
+      document.getElementById('videosList').style.width='60%';
     }
     else {
       document.getElementById('videosList').style.display='none';
+      document.getElementById('videosList').style.width='40%';
+
     }
   }
 

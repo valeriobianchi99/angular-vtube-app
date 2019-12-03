@@ -10,7 +10,7 @@ export class YoutubeService {
 
   current = new Subject<any>();
   currentVideo = {};
-  apiKey: string = 'AIzaSyCnL-xKzI_XdykYep8JIwjkGbLFVMDFqfM';
+  apiKey: string = 'AIzaSyBwJW2gezqnzDTWDuRGZ9tX5hFDwXsTRSw';
   position: any = {};
 
   constructor(private http: HttpClient) { }
