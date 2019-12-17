@@ -1,12 +1,44 @@
+/* Tag definitions */
 img {
     width: 80%;
     height: auto;
     margin: 10px;
 }
 
-#titleRow{
+h1 {
+    font-size: 46px;
+}
+/* End of tags 
+
+***
+***
+***
+
+Class definitions */
+.col-md-12 {
+    text-align: left;
+    padding-left: 40px;
+}
+
+.firstLetterofTitle {
+    color: red;
+    opacity: 0.7;
+}
+/* End of classes
+
+***
+***
+***
+
+ID definitions */
+#videoHashtag {
+    color: red;
+    opacity: 0.4;
+}
+
+#titleRow {
     width: 100%;
-    position:fixed;
+    position: fixed;
     height: 100px;
     line-height: 40px;
     z-index: 99;
@@ -15,15 +47,47 @@ img {
     border-bottom: 1px solid gainsboro;
     width: 60%;
 }
-.col-md-12 {
-    text-align: left;
-    padding-left: 40px;
+
+#lastVideoCOntainer {
+    position: relative;
+    top: 120px;
 }
 
-h1 {
-    font-size: 46px;
+#videoTitle {
+    color: red;
+    font-weight: bold;
 }
 
-@media screen and (max-width: 1100px) {
-    #titleRow { width: 100%; }
-  }
+#publishedAt {
+    font-size: 12px;
+    color: black;
+    opacity: 0.5
+}
+
+#description {
+    font-size: 16px;
+    opacity: 0.8;
+}
+
+#descriptionTitle {
+    color: red;
+    opacity: 0.7;
+}
+
+#channelTitle {
+    font-size: 19px;
+    opacity: 0.9
+}
+/* End of ID
+
+***
+***
+***
+
+Media query */
+@media only screen and (max-width: 1100px) {
+    #titleRow {
+        width: 100%;
+    }
+}
+/* End of media query */

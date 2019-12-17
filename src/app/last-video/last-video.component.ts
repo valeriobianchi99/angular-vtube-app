@@ -10,27 +10,31 @@ import { YoutubeService } from '../youtube.service';
 
 export class LastVideoComponent implements OnInit, OnChanges {
 
+  // Properties
   @Input() lastVideo: any;
   player: YT.Player;
   subscription: Subscription;
   position: any;
 
   constructor(private youtube: YoutubeService) {
+    // Getting lastVideo from YT api
     this.subscription = this.youtube.getVideos().subscribe(
-      res=>{
-        if(res){
-          this.lastVideo=res['items'][0];
+      res => {
+        if (res) {
+          this.lastVideo = res['items'][0];
         }
       }
     );
   }
 
-  ngOnChanges(changes: SimpleChanges){
-    if(changes.lastVideo.currentValue) {
+  // Changing the loaded video in the player
+  ngOnChanges(changes: SimpleChanges) {
+    if (changes.lastVideo.currentValue) {
       this.player.loadVideoById(this.lastVideo.id.videoId);
     }
   }
 
+  // When the player is ready
   readyPlayer(play: any) {
     this.player = play;
     this.player.loadVideoById(this.lastVideo.id.videoId);
@@ -38,6 +42,5 @@ export class LastVideoComponent implements OnInit, OnChanges {
 
   ngOnInit() {
   }
-
 
 }

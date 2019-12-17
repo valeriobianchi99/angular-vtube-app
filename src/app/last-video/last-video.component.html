@@ -1,30 +1,39 @@
+<!-- Top Title -->
 <div class="row" id="titleRow">
-    <div class="col-md-12" style="text-align: left; margin: 0px;">
-        <h1> <strong style="color:red;opacity:0.7;">V</strong>Tube</h1> 
+    <div class="col-md-12" style="margin: 0px;">
+        <h1> <strong class="firstLetterofTitle">V</strong>Tube</h1> 
     </div>
 </div>
+<!---->
 
-<div class="container-fluid" style="position: relative;top: 120px;">
+<!-- Main container of lastVideo component -->
+<div class="container-fluid" id="lastVideoContainer">
     <div class="row">
+        <!-- YT Player -->
         <div class="col-md-12">
             <youtube-player height="500px" width="800px" (ready)="readyPlayer($event);" [videoId]="lastVideo?.id.videoId"></youtube-player>
         </div>
+        <!---->
     </div>
     <br>
+    <!-- Video info -->
     <div class="row">
         <div class="col-md-12">
-            <h5 style="color: red; opacity: 0.4;">#TopVideo</h5>
-            <h3 style="color: red; font-weight: bold;">{{ lastVideo?.snippet.title }}</h3>
-            <small style="font-size:12px; color: black; opacity: 0.7">
+            <h5 id="videoHashtag">#TopVideo</h5>
+            <h3 id="videoTitle">{{ lastVideo?.snippet.title }}</h3>
+            <small id="publishedAt">
                 <i class="fas fa-calendar-alt"></i> Published on {{ lastVideo?.snippet.publishedAt.slice(0,10) }}
             </small>
             <br>
             <br>
-            <p style="font-size: 19px; opacity: 0.9">
+            <p id="channelTitle">
                 <strong><i class="fas fa-user-circle"></i> &nbsp;{{ lastVideo?.snippet.channelTitle }}</strong>
             </p>
-            <h5 style="color: red; opacity: 0.7;"><strong>Description</strong></h5>
-            <p style="font-size: 16px; opacity:0.8;">{{ lastVideo?.snippet.description }}</p>
+            <hr>
+            <h5 id="descriptionTitle"><strong>Description</strong></h5>
+            <p id="description">{{ lastVideo?.snippet.description }}</p>
         </div>
     </div>
+    <!---->
 </div>
+<!---->

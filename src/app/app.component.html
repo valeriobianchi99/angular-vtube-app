@@ -1,3 +1,4 @@
+<!-- Top info bar -->
 <div id="topInfo" class="row container-fluid w-100">
   <div class="col-md-6 container-fluid w-auto h-auto" style="text-align: left; padding-left: 10px;">
     Welcome to VTube! Last 24hrs most popular videos.
@@ -8,10 +9,18 @@
       </span>
   </div>
 </div>
+<!---->
+
+<!-- Main container of the app -->
 <div class="container-fluid w-100 h-100 p-0 m-0" id="main">
+  <!-- Last video -->
   <app-last-video class="container-fluid w-auto mx-auto p-auto h-auto" [lastVideo]="getVideo()"></app-last-video>
+  <!---->
+  <!-- Videos list -->
   <app-videos id="videosList" class="container-fluid w-auto p-auto" (setter)="setVideo($event)"></app-videos>
   <span class="videosMenu" (click)="showVideos()">
     <i class="fas fa-bars"></i>
   </span>
+<!---->
 </div>
+<!---->

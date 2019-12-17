@@ -11,6 +11,7 @@ import { EventEmitter } from '@angular/core';
 
 export class VideosComponent implements OnInit{
 
+  // Properties
   videos: any[] = [];
   searchedVideos: any[] = [];
   subscription: Subscription;
@@ -20,29 +21,33 @@ export class VideosComponent implements OnInit{
 
   constructor(private youtube: YoutubeService) {
     console.clear();
+    // Getting list of videos from YT api
     this.subscription = this.youtube.getVideos().subscribe(
       res=>{
           for(let el of res['items']){
+            // But not the first element
             if(res['items'].indexOf(el)>0){
               this.videos.push(el);
             }
           }
         }
     );
-    console.log('Videos V');
-    console.log(this.videos);
+    console.log('Videos', this.videos);
     this.searchedVideos=this.videos;
 
   }
   
+  // Getter method
   getVideos():any{
     return this.videos;
   }
 
+  // Play the video passing the object to the player
   playVideo(obj:any):void {
     this.setter.emit(obj);
   }
 
+  // Applying a filter to the list
   search():void{
     if(this.filtro==''){
       this.searchedVideos=this.getVideos();
@@ -52,10 +57,10 @@ export class VideosComponent implements OnInit{
     }
   }
 
+  // Reloading the page
   default():void {
     window.location.reload();
   }
-
 
   ngOnInit(){
   }

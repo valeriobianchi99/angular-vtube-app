@@ -8,13 +8,15 @@ import { Observable, Subject, throwError } from 'rxjs';
 })
 export class YoutubeService {
 
+  // Properties
   current = new Subject<any>();
   currentVideo = {};
-  apiKey: string = 'AIzaSyBwJW2gezqnzDTWDuRGZ9tX5hFDwXsTRSw';
+  apiKey: string = 'AIzaSyCFyXjL5JExyytE9DdCJkJMeK6DzR2B848'; // API key
   position: any = {};
 
   constructor(private http: HttpClient) { }
 
+  // Get call to YT api
   getVideos():Observable<Object> {
     var date = new Date();
     return this.http.get(
@@ -25,6 +27,7 @@ export class YoutubeService {
     );
   }
 
+  // Handling errors, showing err message to video
   handleError(err: HttpErrorResponse){
     document.getElementById('main').innerHTML = '&nbsp; '+ err.status + ' - ' + err.statusText;
     console.clear();

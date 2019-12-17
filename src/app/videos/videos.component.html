@@ -1,38 +1,45 @@
+<!-- Topbar -->
 <div id="topBar" class="container-fluid mx-auto h-auto">    
-    <div class="row container-fluid h-auto" style="border:none; text-align: left; color: red; opacity: 0.7;">
+    <div class="row container-fluid h-auto" id="videosListTitle">
         <div class="col-md-12">
             <h5 style="padding: 5px;"><i class="fas fa-video"></i> See also</h5>
         </div>
     </div>
     <div class="row container-fluid h-auto" style="border: none;">
         <div class="col-md-8" style="text-align: left;">
+            <!-- Search in the list -->
             <input type="text" (input)="search()" [(ngModel)]="filtro" placeholder="Filter..." title="Search"> <br>  
+            <!---->
         </div>
         <div class="col-md-4">
-            <button title="Refresh the page" (click)="default();" style="margin: 0px; color: #333; text-align: center;">
+            <!-- Refresh the page -->
+            <button title="Refresh the page" (click)="default();" id="refreshButton">
                 <span style="font-size: 22px;">
                     <i class="fas fa-redo"></i>
                 </span>
                 &nbsp;
                 Refresh
             </button>
+            <!---->
         </div>
     </div>
 </div>
+<!---->
 
+<!-- Div containing the list of videos -->
 <div id="id1" class="container-fluid">
-<div id="videoRow" title="Click to play video" class="row container-fluid" *ngFor="let video of searchedVideos">
-    <div class="col-md-6 container-fluid">
-        <img [src]="video.snippet.thumbnails.medium.url" (click)="playVideo(video);">
+    <!-- Array -> Rows with videos info -->
+    <div title="Click to play video" class="videoRow row container-fluid h-auto w-auto" *ngFor="let video of searchedVideos" (click)="playVideo(video)">
+        <div class="videoPic col-md-6 container-fluid">
+            <img [src]="video.snippet.thumbnails.medium.url">
+        </div>
+        <div class="videosListDescription col-md-6 container-fluid">
+            <button class="videosListTitle">
+                {{ video.snippet.title }}
+            </button><br>
+            <small class="channelTitle"><i class="fas fa-user-circle"></i> &nbsp;{{ video.snippet.channelTitle }}</small>
+        </div>
     </div>
-    <div class="col-md-6 container-fluid" style="text-align: left; padding-left: 5px;">
-        <button (click)="playVideo(video);" style="padding: 0px;">
-            {{ video.snippet.title }}
-        </button><br>
-        <small style="color:#333; font-size: 14px;"><i class="fas fa-user-circle"></i> &nbsp;{{ video.snippet.channelTitle }}</small>
-    </div>
+    <!---->
 </div>
-</div>
-
-
-
+<!---->

@@ -8,16 +8,20 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
 
+  // Properties
   video: any;
 
+  // Set method
   setVideo(obj):void{
     this.video=obj;
   }
 
+  // GEt method
   getVideo():object {
     return this.video;
   }
-
+  
+  // Show/hide videos list
   showVideos():void {
     var status = document.getElementById('videosList').style.display;
     if(status=='none'){
